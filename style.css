@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  width: 2.5;
+  font-size: 1.975rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.nav-toggle{
+  display: none;
+}
+
+.social-icons{
+  height: auto;
+  display: flex;
+}
+
+
+.links{
+  height: auto;
+  display: flex;
+}
+/*  display: flex;
+align-items: center;
+justify-content: space-between;
+
+  important this rule  it shows us 2 seperate elements on the page 
+  as a left nad right ones, first ont he left second on the right 
+  when we dont show the navbar(display:none) 
+  it takes another elements for the page thats why we take
+  links element on our page  
+*/
+
+ 
+.nav-center{
+  background-color: aqua;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+ 
+
+ 
+.nav-center:hover {
+  transition: width 2s, height 4s;
+}
+
+ul li a :hover {
+  transition: width 2s, height 4s;
+}
+
+ 
+
+.nav-toggle {
+  border-radius: 3px;
+}
+
+.nav-toggle:active {
+  transform: rotate(180deg);
+  background-color: azure;
+  width: 40px;
+}
+
+.nav-toggle:hover {
+  transition: transform 300ms;
+  cursor: pointer;
+}
+
+ 
+
+nav ul, li {
+  display: inline;
+  padding: 15px;
+}
+ 
+.show-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 5px;
+  top: 120px;
+}
+ 
+
+@media (max-width: 950px){
+
+  /* when its 950 max-with we designed as a normal menu very useful for webside  */
+
+
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-toggle{
+    position:fixed;
+    left: 40rem;
+    display: block;
+  }
+  
+  .nav-header {
+    padding: 0;
+  }
+  .social-icons{
+    display: none;
+   }
+  
+   .links{
+    height: auto;
+    display: flex;
+  }
+
+  .links a {
+    font-size: 1.2rem;  
+    display: block;
+  }
+  
+}
+
+
+
+@media (max-width: 600px) {
+
+ 
+
+  .nav-toggle{
+    display: block;
+  }
+
+
+
+  .nav-center {
+    max-width: 1070px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+
+  
+  .social-icons {
+    height: auto;
+    display: none;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+}
+
+
+
+@media (max-width: 300px){
+  .social-icons{
+    display: none;
+   }
+  
+ 
+
+  .links a {
+    font-size: 1rem;  
+    display: none;
+  }
+
+  .nav-toggle{
+    display: none;
+  }
+}
